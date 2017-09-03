@@ -28,7 +28,7 @@ public class MyFirstServlet extends HttpServlet {
 }
 ```
 
-注意我们使用了 `HttpServlet` 而不是前一个例子中的 `Servlet`，然而这样的代码不仅写起来困难，可维护性也不高。为了把 HTML 这些非逻辑的部分抽离出来，人们引入了 JSP 技术。
+注意我们使用了 `HttpServlet` 而不是前一个例子中的 `Servlet`。这样的代码不仅写起来困难，可维护性也不高。为了把 HTML 这些非逻辑的部分抽离出来，人们引入了 JSP 技术。
 
 JSP，全称 JavaServer Pages。JSP 可以理解成一种高度抽象的 Servlet。事实上 JSP 在运行期间会被编译成 Servlet，因此 JSP 和 Servlet 可以认为没有本质上的差异，只不过写起来容易了很多。
 

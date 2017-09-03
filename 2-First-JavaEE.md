@@ -78,7 +78,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
 可以看到 `web.xml` 的作用是告诉 Tomcat，我们想使用哪个 Servlet 来处理对应的请求。Tomcat 通过 `web.xml` 找到对应的 Servlet 完成请求以及响应过程。
 
-下面是惨绝人寰的部署过程。首先找到 Tomcat 的目录，其中有一个 webapps 文件夹，在里面创建一个新的 MyFirstServlet 文件夹，然后把整个 `WEB-INF` 文件夹拷贝过去，此时的目录结构应该是这样的：
+下面是具体的部署过程。首先找到 Tomcat 的目录，其中有一个 webapps 文件夹，在里面创建一个新的 MyFirstServlet 文件夹，然后把整个 `WEB-INF` 文件夹拷贝过去，此时的目录结构应该是这样的：
 
 ```plaintext
 webapps
