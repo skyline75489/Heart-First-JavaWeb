@@ -42,10 +42,11 @@ JSP，全称 JavaServer Pages。JSP 可以理解成一种高度抽象的 Servlet
 <%@ page import="java.time.LocalDateTime" %>
 <html>
 <body>
-<h1>
+<h2>
 <%
 out.write(LocalDateTime.now().toString());
 %>
+</h2>
 </body>
 </html>
 ```
