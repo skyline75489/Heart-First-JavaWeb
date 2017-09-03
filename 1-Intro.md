@@ -41,4 +41,8 @@ EJB 全称 Enterprise JavaBean，和 Servlet 一样，也是 JavaEE 当中的一
 
 ##### Spring
 
-Spring 是一个非常庞大的框架，其中
+Spring 是一个非常庞大的框架，其中包括 SpringMVC，SpringBoot 以及 SpringCloud 等用于 Web 开发的工具。
+
+Spring 某种程度上可以认为是 EJB 的替代品。Spring 不需要完整的 JavaEE 内容，仅仅依赖了最基础的 Servlet，也不需要 EJB Container，只用普通的 Servlet Container 就可以运行。在 Servlet 之上 Spring 提供了诸多方便好用的工具，极大地降低了 Java Web 开发入门门槛。
+
+注意一些中文资料把 JavaEE 以及 JavaWeb 和 Spring 混淆在一起，是十分不妥的。经过前面的介绍可以看到，Spring 和 JavaEE 不是一个层面上的东西。Spring 仅依赖了 JavaEE 的 API 标准，最新版的 Spring 甚至进一步隔绝了 JavaEE 的 API。开发者可以完全不关心 Servlet 或者 JavaEE 等概念，也可以进行 Java Web 开发。同时 Spring 也不是唯一的 Java Web 框架，其竞争对手有 Structs，Spark 等。
