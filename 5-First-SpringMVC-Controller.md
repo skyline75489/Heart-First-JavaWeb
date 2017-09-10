@@ -10,7 +10,7 @@ SpringMVC，顾名思义，整个框架都是构建在 MVC 基础之上的，不
 
 将上面下载的依赖解压缩之后，将那些 jar 包加入 IDEA 的依赖路径当中，注意以 javadoc 和 sources 结尾的 jar 包忽略不计。
 
-#### SpringMVC 配置
+#### Servlet 配置
 
 前面提到过 SpringMVC 是构建在 Servlet 基础之上的，它对外提供了一个名为 DispatchServlet 的类，这个类相当于是 SpringMVC 和 Servlet API 的一个交界点。顾名思义，它也是 SpringMVC 当中对于请求处理的一个分发器。它将 Servlet 传递过来的请求根据 URL 分发给对应的 Controller。
 
@@ -44,3 +44,55 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 2. 使用了 `/*` 的 wildcard URL，意味着所有的请求都将通过 DispatcherServlet 处理。
 
 #### 编写 Controller
+
+相比直接使用 Servlet API，编写 Controller 可以说是容易了太多。创建一个 MyFirstSpringController 类：
+
+```java
+package com.skyline;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class MyFirstSpringController {
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public @ResponseBody String Hello() {
+        return "Hello, SpringMVC.";
+    }
+}
+```
+
+我们使用了若干 Annotation 来简化代码的编写。通过 `@Controller` 我们将一个普通 Java 类标记成一个 Controller 类。通过 `@RequestMapping` 和 `@ResponseBody` 我们将一个普通函数标记成可以处理 GET 请求，同时返回字符串的 Handler。
+
+#### SpringMVC 配置
+
+我们编写了一个 Controller 之后，怎么样让 DispatchServlet 找到我们编写的 Controller 呢？SpringMVC 提供了使用 xml 配置的方法。在 `WEB-INF` 文件夹下，也就是 web.xml 隔壁，创建一个 MyFirstServletName-servlet.xml（注意命名）：
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+        
+        <bean class="com.skyline.MyFirstSpringController"/>
+
+</beans>
+```
+
+上面的配置中，我们将编写的 MyFirstSpringController 加入了 beans 列表，SpringMVC 就能找到我们的 Controller 并且进行初始化了。
+
+> JavaBeans 是个很奇怪但是很 Java 的名字，维基百科指出 JavaBeans 指的是具有无参构造函数，使用 Getter 和 Setter 来访问属性的 Java 类。
+
+#### 部署
+
+和前面提到的 Tomcat 部署过程类似，首先我们将类生成的 class 文件拷贝到 `WEB-INF/classes` 下。同时由于引入了依赖，我们还需要将 Spring 以及之前提到的 common-logging jar 包拷贝到 `WEB-INF/lib` 文件夹下。完成之后，启动 Tomcat，打开浏览器可以看到运行的结果：
+
+![result](./img/5-mvc-controller-result.png)
