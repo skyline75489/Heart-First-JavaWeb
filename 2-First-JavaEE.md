@@ -47,11 +47,21 @@ public class MyFirstServlet implements Servlet {
 }
 ```
 
-这时候代码上会报很多错误，核心原因是 `javax.servlet` 这个包找不到。前面提的过 Servlet API 是包含在 JavaEE 当中的。为了方便，我们直接使用 Tomcat 附带的 servlet-api.jar 包。在 IDEA 中打开 Library Settings（External Libraries 下面的任意一项右键 -> Open Library Settings，在 Classpath 中加入 servlet-api.jar：
+这时候代码上会报很多错误，核心原因是 `javax.servlet` 这个包找不到。前面提的过 Servlet API 是包含在 JavaEE 当中的。为了方便，我们直接使用 Tomcat 附带的 servlet-api.jar 包。
+
+在 IDEA 中打开 Library Settings（External Libraries 下面的任意一项右键 -> Open Library Settings。
+
+加入依赖有两种办法。一种是在 Classpath 中加入 servlet-api.jar，这个 Classpath 会影响所有使用该 JDK 的工程（不只是当前工程）：
 
 ![classpath](./img/2-library-settings.png)
 
-这时工程应该可以正常通过编译了。
+另一种办法是只给当前工程添加依赖，在左侧选择 Modules，在 Dependencies 中加入所需依赖的路径：
+
+![module](./img/2-module-settings.png)
+
+为了避免对别的工程产生影响，推荐使用后一种方式添加依赖。
+
+添加依赖完成之后，这时工程应该可以正常通过编译了。
 
 #### 部署
 
