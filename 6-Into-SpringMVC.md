@@ -76,3 +76,22 @@ public class MyFirstSpringController {
 ```xml
 <bean class="com.skyline.MyFirstSpringController"/>
 ```
+
+后面我们会看到，Spring 把很多东西包括自己的一些组件也都称为 Bean，这个称呼就显得更加泛化了。
+
+
+### SpringMVC Magic
+
+首先 SpringMVC 需要知道我们的 Controller 是什么。前面我们在配置文件里标明了我们的 Controller 类是什么。实际上我们也可以让 SpringMVC 自己去找，把 `<bean>` 那一行换成：
+
+```xml
+<context:component-scan base-package="com.skyline"/>
+```
+
+这样 SpringMVC 便会在运行时自己查找标记有 `@Controller` 的类，进行初始化配置。
+
+对于请求的分发处理，`@RequestMapping` 的作用很明显，在初始化 Controller 的时候，SpringMVC 把 `@RequestMapping` 注解当中的信息进行处理，之后就可以根据这些信息，把请求分发到对应的 Controller 当中的对应方法里。
+
+`@ResponseBody` 表明函数的返回值应该被用作 HTTP 返回的 body 处理。SpringMVC 用我们返回的字符串生成 HTTP 响应，返回给了客户端。
+
+这就是 SpringMVC 大体的工作流程，可以看到 SpringMVC 通过 Annotation 以一种低侵入性的方式，提供了一套 Web 开发的 API。
