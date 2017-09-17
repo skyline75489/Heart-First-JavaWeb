@@ -71,7 +71,7 @@ public class MyFirstSpringController {
 2. 所有的成员都是 private，对外暴露 getter 和 setter
 3. 实现 `Serializable`
 
-后面 JavaBean 这个概念也逐渐的泛化，不再局限于 Model 类，出现了所谓的业务 Bean 等。还是拿我们的 Controller 类举例子，它不仅仅是一个 POJO，也是一个 JavaBean。在 Spring 的配置中我们也使用了 Bean 来称呼它：
+后面 JavaBean 这个概念也逐渐的泛化，不再局限于 Model 类，出现了所谓的业务 Bean 等，对于 `Serializable` 的要求也显得可有可无。还是拿我们的 Controller 类举例子，它不仅仅是一个 POJO，也是一个 JavaBean。在 Spring 的配置中我们也使用了 Bean 来称呼它：
 
 ```xml
 <bean class="com.skyline.MyFirstSpringController"/>
