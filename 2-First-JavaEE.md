@@ -2,7 +2,7 @@
 
 JavaEE 是 Java Web 开发当中事实上的标准，诸多框架也都是建立在 JavaEE 的 API 基础之上的。为了从头理解 Java Web 开发，我们将从一个最简单的 JavaEE Servlet 应用开始，一步一步进入 Java Web 开发的世界。
 
-#### 准备工作
+### 准备工作
 
 要完成这个教程，你只需要有网络就可以了，首先下载 IntelliJ IDEA Community 版。没错，我们就是故意要使用 Community 版，尽管 Utimate 版对 JavaEE 开发的支持更好，但是更好的工具却可能让我们忽略底层的细节。Community 版对于入门来说已经足够。
 
@@ -10,7 +10,7 @@ JavaEE 是 Java Web 开发当中事实上的标准，诸多框架也都是建立
 
 最后你需要一个 Servlet Container，去 Tomcat 网站下载一个版本，主要要和 JDK 的版本要求相匹配。示例使用的是 Tomcat 8.5.0。
 
-#### 第一个 Servlet
+### 第一个 Servlet
 
 首先创建一个工程，选择好 JDK 版本，一路 Next 就可以了。创建好工程之后，我们创建一个新的 Servlet。首先在左边的 src 上右键创建一个 package，然后在 package 上右键，创建一个 Java Class：
 
@@ -63,7 +63,7 @@ public class MyFirstServlet implements Servlet {
 
 添加依赖完成之后，这时工程应该可以正常通过编译了。
 
-#### 部署
+### 部署
 
 为了让 Servlet 跑起来，我们需要把它部署到 Tomcat 上。首先在 src 目录隔壁，创建一个 `WEB-INF` 目录（注意名字一定要正确），然后在里面创建一个 `web.xml` 文件：
 
@@ -110,7 +110,7 @@ webapps
       - web.xml
 ```
 
-#### 运行
+### 运行
 
 完成部署工作之后，需要启动 Tomcat 服务器。找到 Tomcat 目录中的 bin 文件夹，使用 cmd 运行其中的  startup.bat。如果提示没有设置 `JAVA_HOME` 或 `JRE_HOME`，需要到环境变量中设置一下。完成设置之后，Tomcat 应该可以正常启动。
 
