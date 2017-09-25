@@ -71,27 +71,16 @@ public class MyFirstSpringController {
 2. 所有的成员都是 private，对外暴露 getter 和 setter
 3. 实现 `Serializable`
 
-后面 JavaBean 这个概念也逐渐的泛化，不再局限于 Model 类，出现了所谓的业务 Bean 等，对于 `Serializable` 的要求也显得可有可无。还是拿我们的 Controller 类举例子，它不仅仅是一个 POJO，也是一个 JavaBean。在 Spring 的配置中我们也使用了 Bean 来称呼它：
+后面 JavaBean 这个概念也逐渐的泛化，不再局限于 Model 类，出现了所谓的业务 Bean 等，对于 `Serializable` 的要求也显得可有可无。还是拿我们的 Controller 类举例子，它不仅仅是一个 POJO，也是一个 JavaBean。
 
-```xml
-<bean class="com.skyline.MyFirstSpringController"/>
-```
-
-后面我们会看到，Spring 把很多东西包括自己的一些组件也都称为 Bean，这个称呼就显得更加泛化了。
-
+后面我们会看到，Spring 把很多东西包括自己的一些组件也都称为 Bean，这个称呼可以看成是对 JavaBean 的进一步泛化。
 
 ### SpringMVC Magic
 
-首先 SpringMVC 需要知道我们的 Controller 是什么。前面我们在配置文件里标明了我们的 Controller 类是什么。实际上我们也可以让 SpringMVC 自己去找，把 `<bean>` 那一行换成：
+首先 SpringMVC 需要知道我们的 Controller 是什么。前面我们在配置文件里标明了我们的 Controller 类是什么。
 
-```xml
-<context:component-scan base-package="com.skyline"/>
-```
-
-这样 SpringMVC 便会在运行时自己查找标记有 `@Controller` 的类，进行初始化配置。
-
-对于请求的分发处理，`@RequestMapping` 的作用很明显，在初始化 Controller 的时候，SpringMVC 把 `@RequestMapping` 注解当中的信息进行处理，之后就可以根据这些信息，把请求分发到对应的 Controller 当中的对应方法里。
+在 Controller 类中，对于请求的分发处理，`@RequestMapping` 的作用很明显。在初始化 Controller 的时候，SpringMVC 把 `@RequestMapping` 注解当中的信息进行处理，之后就可以根据这些信息，把请求分发到对应的 Controller 当中的对应方法里。
 
 `@ResponseBody` 表明函数的返回值应该被用作 HTTP 返回的 body 处理。SpringMVC 用我们返回的字符串生成 HTTP 响应，返回给了客户端。
 
-这就是 SpringMVC 大体的工作流程，可以看到 SpringMVC 通过 Annotation 以一种低侵入性的方式，提供了一套 Web 开发的 API。
+这就是 SpringMVC 大体的工作流程，可以看到 SpringMVC 通过 Annotation 以一种低侵入性的方式，提供了一套简洁好用的 Web 开发的 API。
