@@ -76,7 +76,7 @@ public class MyServiceImpl implements MyService {
 }
 ```
 
-我们的实现类就是一个简单的 JavaBean，为了初始化它，我们需要 configuration，这个例子了我们需要一个 XML 配置文件。 在 IDEA 的输出文件夹，也就是 `com` 这个文件夹的隔壁，创建一个 `services.xml`：
+我们的实现类就是一个简单的 JavaBean，为了初始化它，我们需要 configuration，这个例子里我们使用的是 XML 配置文件。 在 IDEA 的输出文件夹，也就是 `com` 这个文件夹的隔壁，创建一个 `services.xml`：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
