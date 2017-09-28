@@ -34,9 +34,9 @@ public class MySpringContainer {
 
 Spring IoC 当中有若干基本概念需要了解一下：
 
-1. Spring 当中的 IoC Container 被称为 Context，代码上体现为 `ApplicationContext` 接口。Spring 自带了若干实现，例如 `ClassPathXmlApplicationContext` 和 `FileSystemXmlApplicationContext` 等。
-2. Spring 的 Container 依赖于 configuration metadata（也就是配置）去初始化对象。
-3. Spring 中把由 Container 管理的对象，称为 Bean。
+1. Spring 当中的 IoC Container 被称为 **Context**，代码上体现为 `ApplicationContext` 接口。Spring 自带了若干实现，例如 `ClassPathXmlApplicationContext` 和 `FileSystemXmlApplicationContext` 等。
+2. Spring 的 Container 依赖于 **Configuration metadata**（配置元数据）去初始化对象。
+3. Spring 中把由 Container 管理的对象，称为 **Bean**。
 
 因此 Spring IoC Container 的主要工作就是使用对象的定义，加上 Configuration，生成 Bean。下面用一个例子说明一下。
 
