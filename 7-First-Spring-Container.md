@@ -38,6 +38,8 @@ Spring IoC 当中有若干基本概念需要了解一下：
 2. Spring 的 Container 依赖于 **Configuration metadata**（配置元数据）去初始化对象。
 3. Spring 中把由 Container 管理的对象，称为 **Bean**。
 
+>在 《Java 核心技术(卷2)》中，作者引用了 Sun 公司文档的定义，把可重用的 Java 组件称为 Bean，注意不要和本文的 Bean 定义混淆。
+
 因此 Spring IoC Container 的主要工作就是使用对象的定义，加上 Configuration，生成 Bean。下面用一个例子说明一下。
 
 传统上，也就是早期 Spring 开发的时候，都是使用 XML 配置文件的，这里我们也使用它做例子，后面我们会看到更多非 XML 配置的方法。
