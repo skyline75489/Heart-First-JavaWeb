@@ -19,7 +19,7 @@
 </beans>
 ```
 
->注意我们去掉了 `<context:annotation-config>`，因为 `<context:component-scan>` 默认就会打开 `<context:annotation-config>`，因此不需要再手动设置 `<context:annotation-config>`。
+>注意我们去掉了所有的 Bean 定义，也同时去掉了 `<context:annotation-config>`，因为 `<context:component-scan>` 默认就会打开 `<context:annotation-config>`，因此不需要再手动设置 `<context:annotation-config>`。
 
 ### Component
 
