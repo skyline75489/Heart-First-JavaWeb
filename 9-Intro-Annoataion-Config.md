@@ -62,7 +62,9 @@ public class MyServiceImpl implements MyService {
 
 运行程序，输出的结果是相同的。
 
-`@Autowired` 同样也可以用于 Constructor：
+通过上面的内容可以看到，本质上 `@Autowired` 就是把原先在 XML 中对于对象的引用配置，转移到了 Java 代码当中。
+
+`@Autowired` 也可以直接用于 Constructor：
 
 ```java
 public class MyServiceImpl implements MyService {
