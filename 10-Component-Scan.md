@@ -23,7 +23,7 @@
 
 ### Component
 
-Spring 中定义了若干用于注册 Bean 的 Annotation，包括 `@Component` 以及继承自 `@Component` 的 `@Service` 和 `@Repository`。Spring 中推荐使用 `@Service` 和 `@Component` 标示逻辑和服务层的组件，使用 `@Repository` 标示持久层的组件。
+Spring 中定义了若干用于注册 Bean 的 Annotation，包括 `@Component` 以及继承自 `@Component` 的 `@Service` 和 `@Repository`。所谓的 component-scan 也就是告诉 Spring 去扫描标示了这些 Annotation 的类，将它们用于 Bean 的注册。 Spring 中推荐使用 `@Service` 和 `@Component` 标示逻辑和服务层的组件，使用 `@Repository` 标示持久层的组件。
 
 >`@Service` 和 `@Repository` 都继承自 `@Component`，因此在 Bean 注册的层面，它们没有本质上的区别，不过 `@Repository` 在持久层会有一个 exception 转换的作用，这里先略去不讲。
 
