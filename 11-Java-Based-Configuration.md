@@ -43,3 +43,29 @@ public class MySpringContainer {
 注意我们使用 `AnnotationConfigApplicationContext` 代替了之前的 `ClassPathXmlApplicationContext`，然后把 `AppConfig.class` 作为参数传给了 Context。
 
 运行程序，得到的结果和之前是一样的，当然现在 `service.xml` 这个文件也可以完全删除掉了。
+
+另外，我们也可以直接在 `AppConfig` 当中加入 `@Bean`，不需要再使用 `@Component`，例如我们把 `MyPersonComponent` 中的内容挪到 `AppConfig` 当中：
+
+```java
+@Configuration
+@ComponentScan("com.skyline")
+public class AppConfig {
+
+    @Bean
+    public Person aPerson() {
+        Person aPerson = new Person();
+        aPerson.setName("Chester");
+        return aPerson;
+    }
+
+    @Bean
+    public MyServiceImpl myService() {
+        MyServiceImpl service = new MyServiceImpl();
+        service.setGreeting("Hello");
+        return service;
+    }
+
+}
+```
+
+注意我们使用了简化的 `@Bean` 定义，Spring 会直接把函数名称 `aPerson` 和 `myService` 作为 Bean 的名称。运行代码，依然可以得到同样的结果。
