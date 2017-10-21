@@ -19,7 +19,7 @@ public class AppConfig {
 }
 ```
 
-其中注意 `@Configuration` 这个 Annotation，它是标记配置类的关键。下面的 `@ComponentScan` 和 XML 中 `<context:component-scan>` 是对应的。
+其中注意 `@Configuration` 是指示该类为 Bean 配置的源头，作用上类似于之前使用的 `service.xml`。只有标记了 `@Configuration` 的类当中才能出现类似 XML 中的 Bean 之间互相依赖关系。这个 Annotation，它也继承自 `@Component`，因此也可以用于自动扫描。下面的 `@ComponentScan` 和 XML 中 `<context:component-scan>` 是对应的。
 
 然后修改我们使用的 Context：
 
@@ -70,7 +70,7 @@ public class AppConfig {
 
 注意我们使用了简化的 `@Bean` 定义，Spring 会直接把函数名称 `aPerson` 和 `myService` 作为 Bean 的名称。运行代码，依然可以得到同样的结果。
 
-#### Code vs XML
+### Code vs XML
 
 到现在我们已经实现了彻底不依赖 XML 来进行 Spring Container 和 Bean 的配置，用代码配置和用 XML 配置各有什么优缺点呢？这里简单分析一下：
 
