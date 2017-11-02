@@ -9,7 +9,7 @@ Maven 是一个非常强大的 Java 构建工具，包含了依赖管理，版�
 
 在工程名字上右键点击，选择“Add Framework Support”。在打开的对话框中，勾选 Maven，然后点击确定。
 
-工程中将会出现一个 `pom.xml` 文件，它的全称是 project object model，是 Maven 当中用来描述项目信息的一个文件：
+工程中将会出现一个 `pom.xml` 文件，它的全称是 “project object model”，是 Maven 当中用来描述项目信息的一个文件：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -76,3 +76,5 @@ IDEA 会提示我们 POM 文件改变，选择“Import Changes”，会看到�
 在导入依赖之后，我们可以正常编译项目，如果提示 javacTask 目标有问题，可能是项目配置有问题，打开 Settings，修改项目的目标 bytecode 版本为 1.8：
 
 ![target-bytecode-version](./img/16-target-bytecode-version.png)
+
+后面的内容中，我们将通过 Maven 来添加需要的依赖，而不再需要手动下载 jar 包。
