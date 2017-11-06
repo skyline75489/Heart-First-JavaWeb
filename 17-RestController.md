@@ -62,3 +62,6 @@ public class AppConfig {
 
 `@EnableWebMvc` 是 Spring MVC 新版本所推荐的用法，它会帮我们做很多配置工作。`@EnableWebMvc` 具体做的事情可以参考 [Spring 官方文档](https://docs.spring.io/spring/docs/4.2.1.RELEASE/javadoc-api/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.html)。这里我们需要知道的是，`@EnableWebMvc` 会帮我们配置好 JSON 有关的响应 Handler。如果没有，是不能返回 JSON 响应的。
 
+编译代码之后，将生成的代码拷贝到 Tomcat 的工作目录，同时不要忘记将 Jackson 的 jar 包也拷贝到 lib 目录下面，这样在运行时 Tomcat 才能找到正确的依赖。运行 Tomcat 在浏览器中可以看到输出：
+
+![rest-result](./img/17-rest-result.png)
