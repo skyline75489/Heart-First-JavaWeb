@@ -59,3 +59,6 @@ Spring 本身是不带 JSON 功能的，不过它提供了对于第三方 JSON �
 public class AppConfig {
 }
 ```
+
+`@EnableWebMvc` 是 Spring MVC 新版本所推荐的用法，它会帮我们做很多配置工作。`@EnableWebMvc` 具体做的事情可以参考 [Spring 官方文档](https://docs.spring.io/spring/docs/4.2.1.RELEASE/javadoc-api/org/springframework/web/servlet/config/annotation/WebMvcConfigurationSupport.html)。这里我们需要知道的是，`@EnableWebMvc` 会帮我们配置好 JSON 有关的响应 Handler。如果没有，是不能返回 JSON 响应的。
+
