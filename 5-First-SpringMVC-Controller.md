@@ -4,7 +4,7 @@ SpringMVC，顾名思义，整个框架都是构建在 MVC 基础之上的，不
 
 ### 准备工作
 
-首先下载 Spring-Framework 的 binary 分发版本，这里使用的是 spring-framework-4.3.9.RELEASE-dist。
+首先下载 Spring-Framework 的 binary 分发版本，这里使用的是 spring-framework-4.3.8.RELEASE-dist。
 
 然后下载 Apache 出品的 common-logging，它是 Spring 依赖的一个库，这里使用的是 common-logging-1.2。
 

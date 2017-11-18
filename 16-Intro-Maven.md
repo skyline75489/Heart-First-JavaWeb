@@ -50,7 +50,7 @@ Maven 是一个非常强大的 Java 构建工具，包含了依赖管理，版�
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>4.3.9.RELEASE</version>
+            <version>4.3.8.RELEASE</version>
         </dependency>
 
         <dependency>
