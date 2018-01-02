@@ -1,0 +1,540 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Maven 初步 · 笔试面试知识整理</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="17-RestController.html" />
+    
+    
+    <link rel="prev" href="15-Pure-Java-SpringMVC.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-Intro.html">
+            
+                <a href="1-Intro.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2-First-JavaEE.html">
+            
+                <a href="2-First-JavaEE.html">
+            
+                    
+                    第一个 JavaEE 应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3-First-JSP.html">
+            
+                <a href="3-First-JSP.html">
+            
+                    
+                    第一个 JSP 程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4-Whats-Next.html">
+            
+                <a href="4-Whats-Next.html">
+            
+                    
+                    下一步做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5-First-SpringMVC-Controller.html">
+            
+                <a href="5-First-SpringMVC-Controller.html">
+            
+                    
+                    第一个 SpringMVC Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6-Into-SpringMVC.html">
+            
+                <a href="6-Into-SpringMVC.html">
+            
+                    
+                    初识 SpringMVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7-First-Spring-Container.html">
+            
+                <a href="7-First-Spring-Container.html">
+            
+                    
+                    初识 Spring IoC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8-Intro-Spring-Bean.html">
+            
+                <a href="8-Intro-Spring-Bean.html">
+            
+                    
+                    Spring Bean 初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9-Intro-Annoataion-Config.html">
+            
+                <a href="9-Intro-Annoataion-Config.html">
+            
+                    
+                    Annotation-Based 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10-Component-Scan.html">
+            
+                <a href="10-Component-Scan.html">
+            
+                    
+                    Component Scan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11-Java-Based-Configuration.html">
+            
+                <a href="11-Java-Based-Configuration.html">
+            
+                    
+                    Java Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12-Bean-Scope.html">
+            
+                <a href="12-Bean-Scope.html">
+            
+                    
+                    Bean 生命周期和作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13-Autowiring-Candidate.html">
+            
+                <a href="13-Autowiring-Candidate.html">
+            
+                    
+                    Autowiring Candidate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="14-Servlet-3.html">
+            
+                <a href="14-Servlet-3.html">
+            
+                    
+                    Servlet 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="15-Pure-Java-SpringMVC.html">
+            
+                <a href="15-Pure-Java-SpringMVC.html">
+            
+                    
+                    纯 Java SpringMVC 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="16-Intro-Maven.html">
+            
+                <a href="16-Intro-Maven.html">
+            
+                    
+                    Maven 初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="17-RestController.html">
+            
+                <a href="17-RestController.html">
+            
+                    
+                    RestController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="18-Rest-Practice.html">
+            
+                <a href="18-Rest-Practice.html">
+            
+                    
+                    Rest 实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="19-Intro-SpringBoot.html">
+            
+                <a href="19-Intro-SpringBoot.html">
+            
+                    
+                    SpringBoot 初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Maven 初步</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="maven-&#x521D;&#x6B65;"><a name="maven-&#x521D;&#x6B65;" class="plugin-anchor" href="#maven-&#x521D;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a>Maven &#x521D;&#x6B65;</h1>
+<p>&#x5728;&#x8FDB;&#x4E00;&#x6B65;&#x4ECB;&#x7ECD; SpringMVC &#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4E86;&#x89E3;&#x4E00;&#x4E0B; Java &#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7EC4;&#x6210;&#x90E8;&#x5206;&#x2014;&#x2014;&#x6784;&#x5EFA;&#x548C;&#x5305;&#x7BA1;&#x7406;&#x3002;&#x8FD9;&#x90E8;&#x5206;&#x76EE;&#x524D;&#x4EE5; Gradle &#x548C; Maven &#x4E24;&#x5927;&#x5DE5;&#x5177;&#x4E3A;&#x4E3B;&#x3002;&#x8FD9;&#x4E2A;&#x6559;&#x7A0B;&#x5C06;&#x4F7F;&#x7528; Maven &#x4F5C;&#x4E3A;&#x4F8B;&#x5B50;&#x3002;</p>
+<p>Maven &#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x7684; Java &#x6784;&#x5EFA;&#x5DE5;&#x5177;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#xFF0C;&#x7248;&#x672C;&#x7EF4;&#x62A4;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;&#x7B49;&#x8BF8;&#x591A;&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5C06;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x4F9D;&#x8D56;&#x7BA1;&#x7406;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6253;&#x5F00;&#x5DE5;&#x7A0B;&#xFF0C;&#x5728; Project Settings &#x91CC;&#x53BB;&#x6389;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x6DFB;&#x52A0;&#x7684;&#x8BF8;&#x591A;&#x4F9D;&#x8D56; jar &#x5305;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528; Maven &#x7BA1;&#x7406;&#x8FD9;&#x4E9B;&#x4F9D;&#x8D56;&#x3002;</p>
+<p>&#x5728;&#x5DE5;&#x7A0B;&#x540D;&#x5B57;&#x4E0A;&#x53F3;&#x952E;&#x70B9;&#x51FB;&#xFF0C;&#x9009;&#x62E9;&#x201C;Add Framework Support&#x201D;&#x3002;&#x5728;&#x6253;&#x5F00;&#x7684;&#x5BF9;&#x8BDD;&#x6846;&#x4E2D;&#xFF0C;&#x52FE;&#x9009; Maven&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&#x3002;</p>
+<p>&#x5DE5;&#x7A0B;&#x4E2D;&#x5C06;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x4E2A; <code>pom.xml</code> &#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x7684;&#x5168;&#x79F0;&#x662F; &#x201C;project object model&#x201D;&#xFF0C;&#x662F; Maven &#x5F53;&#x4E2D;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x9879;&#x76EE;&#x4FE1;&#x606F;&#x7684;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>MyJavaWebProject<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>MyJavaWebProject<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8FD9;&#x4E2A; POM &#x6587;&#x4EF6;&#x5C31;&#x662F;&#x63CF;&#x8FF0;&#x6211;&#x4EEC;&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x7684;&#x9879;&#x76EE;&#x7684;&#xFF0C;&#x5176;&#x4E2D; groupId &#x662F;&#x9879;&#x76EE;&#x7EC4;&#x7F16;&#x53F7;&#xFF0C;artifactId &#x662F;&#x9879;&#x76EE; ID&#xFF0C;&#x800C; version &#x662F;&#x9879;&#x76EE;&#x7684;&#x7248;&#x672C;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x5F15;&#x5165;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x5728; <code>pom.xml</code> &#x5F53;&#x4E2D;&#x52A0;&#x5165;&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-xml">
+<span class="php"><span class="hljs-meta">&lt;?</span>xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span><span class="hljs-meta">?&gt;</span></span>
+<span class="hljs-tag">&lt;<span class="hljs-name">project</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0&quot;</span>
+         <span class="hljs-attr">xmlns:xsi</span>=<span class="hljs-string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+         <span class="hljs-attr">xsi:schemaLocation</span>=<span class="hljs-string">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">modelVersion</span>&gt;</span>4.0.0<span class="hljs-tag">&lt;/<span class="hljs-name">modelVersion</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.target</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.target</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">maven.compiler.source</span>&gt;</span>1.8<span class="hljs-tag">&lt;/<span class="hljs-name">maven.compiler.source</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>MyJavaWebProject<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>MyJavaWebProject<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>1.0-SNAPSHOT<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-webmvc<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>4.3.8.RELEASE<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>javax.servlet<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>servlet-api <span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.5<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span>
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x4E8E;&#x4F9D;&#x8D56;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x672C;&#x8D28;&#x4E0A;&#x4E5F;&#x662F;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x548C;&#x63CF;&#x8FF0;&#x6211;&#x4EEC;&#x81EA;&#x5DF1;&#x7C7B;&#x4F3C;&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;Maven &#x53EF;&#x4EE5;&#x5728;&#x4E2D;&#x5FC3;&#x4ED3;&#x5E93;&#x4E2D;&#x627E;&#x5230;&#x6B63;&#x786E;&#x7684;&#x4F9D;&#x8D56;&#x9879;&#x76EE;&#x5E76;&#x5F15;&#x5165;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x7A0B;&#x5F53;&#x4E2D;&#x3002;</p>
+<p>IDEA &#x4F1A;&#x63D0;&#x793A;&#x6211;&#x4EEC; POM &#x6587;&#x4EF6;&#x6539;&#x53D8;&#xFF0C;&#x9009;&#x62E9;&#x201C;Import Changes&#x201D;&#xFF0C;&#x4F1A;&#x770B;&#x5230;&#x6709;&#x5173;&#x7684;&#x4F9D;&#x8D56;&#x88AB;&#x52A0;&#x5165;&#x5230;&#x4E86; &#x201C;External Library&#x201D; &#x4E2D;&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/16-maven-result.png" alt="maven-result"></p>
+<p>&#x5982;&#x679C;&#x5BFC;&#x5165;&#x8FC7;&#x7A0B;&#x975E;&#x5E38;&#x6162;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x80FD;&#x662F;&#x7F51;&#x7EDC;&#x6761;&#x4EF6;&#x4E0D;&#x826F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x4E2D;&#x5FC3;&#x4ED3;&#x5E93;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x4F7F;&#x7528;&#x56FD;&#x5185;&#x7684; Maven &#x955C;&#x50CF;&#x3002;</p>
+<p>&#x5728; File -&gt; Settings &#x4E2D;&#x627E;&#x5230; Build Tools&#xFF0C;&#x9009;&#x62E9; Maven&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230; Maven &#x672C;&#x5730;&#x7684;&#x914D;&#x7F6E;&#x5730;&#x5740;&#xFF0C;&#x5373; User settings file&#x3002;&#x5728; settings.xml &#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;&#x56FD;&#x5185;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x4F8B;&#x5982; alibaba &#x63D0;&#x4F9B;&#x7684;&#x955C;&#x50CF;&#x5730;&#x5740;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x5FEB; Maven &#x7684;&#x4E0B;&#x8F7D;&#x901F;&#x5EA6;&#x3002;</p>
+<p>&#x5728;&#x5BFC;&#x5165;&#x4F9D;&#x8D56;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x7F16;&#x8BD1;&#x9879;&#x76EE;&#xFF0C;&#x5982;&#x679C;&#x63D0;&#x793A; javacTask &#x76EE;&#x6807;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x9879;&#x76EE;&#x914D;&#x7F6E;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x6253;&#x5F00; Settings&#xFF0C;&#x4FEE;&#x6539;&#x9879;&#x76EE;&#x7684;&#x76EE;&#x6807; bytecode &#x7248;&#x672C;&#x4E3A; 1.8&#xFF1A;</p>
+<p><img src="https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/16-target-bytecode-version.png" alt="target-bytecode-version"></p>
+<p>&#x540E;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x901A;&#x8FC7; Maven &#x6765;&#x6DFB;&#x52A0;&#x9700;&#x8981;&#x7684;&#x4F9D;&#x8D56;&#xFF0C;&#x800C;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x624B;&#x52A8;&#x4E0B;&#x8F7D; jar &#x5305;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="15-Pure-Java-SpringMVC.html" class="navigation navigation-prev " aria-label="Previous page: 纯 Java SpringMVC 配置">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="17-RestController.html" class="navigation navigation-next " aria-label="Next page: RestController">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Maven 初步","level":"1.17","depth":1,"next":{"title":"RestController","level":"1.18","depth":1,"path":"17-RestController.md","ref":"17-RestController.md","articles":[]},"previous":{"title":"纯 Java SpringMVC 配置","level":"1.16","depth":1,"path":"15-Pure-Java-SpringMVC.md","ref":"15-Pure-Java-SpringMVC.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"笔试面试知识整理","gitbook":"*","description":"一些 IT 笔试面试有关知识的整理，包括基础知识，安卓，iOS 开发等，希望对大家有所帮助"},"file":{"path":"16-Intro-Maven.md","mtime":"2018-01-02T13:28:36.802Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-01-02T13:29:19.500Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
