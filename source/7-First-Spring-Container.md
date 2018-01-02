@@ -22,7 +22,7 @@ public class MySpringContainer {
 
 在 IDEA 的 Run/Debug Configuration 中新建一个 Application 配置，指定 main class 为刚创建好的 MySpringContainer：
 
-![application](./img/7-application-config.png)
+![application](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/7-application-config.png)
 
 配置完成之后，可以用 IDEA 启动这个 Java 工程，可以看到对应输出。
 
@@ -122,3 +122,5 @@ public class MySpringContainer {
 ```
 
 执行程序，可以看到正确的打印输出。
+
+

@@ -53,11 +53,11 @@ public class MyFirstServlet implements Servlet {
 
 加入依赖有两种办法。一种是在 Classpath 中加入 servlet-api.jar，这个 Classpath 会影响所有使用该 JDK 的工程（不只是当前工程）：
 
-![classpath](./img/2-library-settings.png)
+![classpath](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/2-library-settings.png)
 
 另一种办法是只给当前工程添加依赖，在左侧选择 Modules，在 Dependencies 中加入所需依赖的路径：
 
-![module](./img/2-module-settings.png)
+![module](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/2-module-settings.png)
 
 为了避免对别的工程产生影响，推荐使用后一种方式添加依赖。
 
@@ -116,4 +116,5 @@ webapps
 
 然后在任意一个浏览器当中，访问 http://localhost:8080/MyFirstServlet/hello 可以看到结果：
 
-![result](./img/2-servlet-result.png)
+![result](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/2-servlet-result.png)
+

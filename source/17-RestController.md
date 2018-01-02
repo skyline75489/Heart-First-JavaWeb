@@ -64,4 +64,5 @@ public class AppConfig {
 
 编译代码之后，将生成的代码拷贝到 Tomcat 的工作目录，同时不要忘记将 Jackson 的 jar 包也拷贝到 lib 目录下面，这样在运行时 Tomcat 才能找到正确的依赖。运行 Tomcat 在浏览器中可以看到输出：
 
-![rest-result](./img/17-rest-result.png)
+![rest-result](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/17-rest-result.png)
+

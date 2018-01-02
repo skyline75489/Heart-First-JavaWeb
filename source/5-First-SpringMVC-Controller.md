@@ -93,5 +93,5 @@ public class MyFirstSpringController {
 
 和前面提到的 Tomcat 部署过程类似，首先我们将类生成的 class 文件拷贝到 `WEB-INF/classes` 下。同时由于引入了依赖，我们还需要将 Spring 以及之前提到的 common-logging jar 包拷贝到 `WEB-INF/lib` 文件夹下。完成之后，启动 Tomcat，打开浏览器可以看到运行的结果：
 
-![result](./img/5-mvc-controller-result.png)
+![result](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/5-mvc-controller-result.png)
 

@@ -53,6 +53,7 @@ out.write(LocalDateTime.now().toString());
 
 通过浏览器访问：
 
-![result](./img/3-jsp-result.png)
+![result](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/3-jsp-result.png)
 
 可以看到效果和使用纯 Servlet 是完全一样的。
+
