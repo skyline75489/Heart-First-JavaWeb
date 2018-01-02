@@ -1,4 +1,4 @@
-## Annotation-Based Config
+## Annotation-Based 配置
 
 除了之前提到的使用 XML 之外，Spring 还提供了使用 Annotation 的方式进行 Bean 配置的方法。首先我们修改 XML 配置文件：
 
@@ -92,3 +92,4 @@ public class MyServiceImpl implements MyService {
     // ...
 }
 ```
+

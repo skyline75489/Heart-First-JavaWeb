@@ -1,5 +1,5 @@
-Rest 服务实践
-===========
+Rest 实践
+========
 
 结合之前所学的内容，这篇教程将基于 SpringMVC 构建一个真正的 Rest 服务。
 
@@ -210,3 +210,4 @@ CREATE TABLE person(id INTEGER, name VARCHAR);
 ```
 
 将编译生成的 class 文件和依赖 jar 包（spring-jdbc，spring-tx，sqlite-jdbc）拷贝到 Tomcat 目录下，运行 Tomcat。使用 Curl 或者浏览器就可以测试我们的 Rest 服务了。
+
