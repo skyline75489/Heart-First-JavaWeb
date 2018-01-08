@@ -1,5 +1,4 @@
 纯 Java SpringMVC 配置
-
 =====================
 
 在上一节中我们去掉了 `web.xml`，通过 Java 代码实现了 Servlet 的配置，然而 SpringMVC 本身的配置文件 `MyFirstServletName-servlet.xml` 依然存在，下面我们看一下如何进一步将它也去掉。
@@ -81,3 +80,4 @@ public class MyWebApplicationInitializer extends AbstractAnnotationConfigDispatc
 
 
 >注意上面有一个 `getRootConfigClasses` 我们返回了空数组。`getServletConfigClasses` 用于创建当前 DispatcherServlet 的 WebApplicationContext，在此基础上，Spring 还允许若干 DispatcherServlet 共享一个 Root WebApplicationContext。Root WebApplicationContext 中可以配置跨 Servlet 共享的业务逻辑等，`getRootConfigClasses` 就是用来提供创建 Root WebApplicationContext 的。
+
