@@ -19,5 +19,6 @@
 * [RestController](17-RestController.md)
 * [Rest 实践](18-Rest-Practice.md)
 * [SpringBoot 初步](19-Intro-SpringBoot.md)
+* [SpringBoot Data Rest 初步](20-Intro-SpringData.md)
 
 

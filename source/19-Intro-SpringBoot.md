@@ -1,4 +1,4 @@
-# SpringBoot 初步
+## SpringBoot 初步
 
 SpringBoot 是构建在 SpringMVC 基础上的新一代 Web 开发框架。相比 SpringMVC，SpringBoot 的配置更简单，上手更容易，因此受到了开发者们的欢迎。下面我们将在前面内容的基础上，学习使用 SpringBoot。
 
