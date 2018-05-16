@@ -111,7 +111,7 @@ customProperty:
 
 ### Auto-Configuration
 
-SpringBoot 对于跨组件依赖的行为，提供了 Auto-Configuration 进行支持。Auto-Configuration 允许我们根据运行时环境进行判断，执行不同的配置操作。最常见的，我们可以判断一个外界的 Bean 是否存在：
+SpringBoot 对于跨组件依赖的行为，提供了 Auto-Configuration 进行支持。Auto-Configuration 允许我们根据运行时环境进行判断，执行不同的配置操作。例如，我们可以判断一个外界的 Bean 是否存在：
 
 ```java
 @Bean
@@ -121,6 +121,6 @@ public MyBean thisBean() {
 }
 ```
 
-显而易见，当已经存在一个名为 dataSource 的 Bean 是，这个 thisBean 才会生效。
+显而易见，当已经存在一个名为 dataSource 的 Bean 时，thisBean 才会生效。
 
-除此之外，还有 `@ConditionalOnMissingBean`，`@ConditionalOnClass` 等等很方便的 annotation 来帮助我们实现自动配置。
+除此之外，还有 `@ConditionalOnMissingBean`，`@ConditionalOnClass` 等等一系列很方便的 annotation 来帮助我们实现自动配置。
