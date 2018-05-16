@@ -30,7 +30,11 @@
 </dependency>
 ```
 
-然后我们需要配置一下数据库连接。为了方便，我们接下来使用 yaml 进行有关配置，将 AppConfig 当中的数据库配置删除。在 resources 下创建 application.yml：
+然后我们需要配置一下数据库连接。为了方便，我们接下来使用 yaml 进行有关配置，将 AppConfig 当中的数据库配置删除。
+
+由于 SQLite 没有提供 Hibernate 的接入支持（Dialect），我们需要手动引入一下，有关代码在这里可以找到 https://github.com/restart1025/Spring-Boot-SQLite/blob/master/src/main/java/com/restart1025/sqlite/SQLiteDialect.java
+
+将这个文件引入工程之后，修改配置文件，让 Hibernate 找到这个驱动：
 
 ```yaml
 spring:
@@ -41,15 +45,6 @@ spring:
     url: jdbc:sqlite:D:\\test.db
     username:
     password:
-```
-
-由于 SQLite 没有提供 Hibernate 的接入支持（Dialect），我们需要手动引入一下，有关代码在这里可以找到 https://github.com/restart1025/Spring-Boot-SQLite/blob/master/src/main/java/com/restart1025/sqlite/SQLiteDialect.java
-
-将这个文件引入工程之后，修改配置文件，让 Hibernate 找到这个驱动：
-
-```yaml
-spring:
-  //...
   jpa:
     database-platform: com.skyline.SQLiteDialect
     hibernate:
