@@ -15,7 +15,7 @@ spring:
     url: jdbc:sqlite:D:\\test.db
 ```
 
-配置文件会随着代码打到 Jar 包当中，进而被 Spring 读取。可以看到这种配置写法可读性也很高。Spring 对配置文件的支持很强大，有兴趣的可以查阅有关资料。这里我们统一使用 yaml 配置的写法。
+配置文件会随着代码打到 Jar 包当中，进而被 Spring 读取。可以看到这种配置写法可读性也很高。Spring 对配置文件的支持很强大，这里我们统一使用 yaml 配置的写法。
 
 除了 Spring 内置的配置项之外，我们也可以定义自己的配置项，并且很方便的在代码中使用。例如我们有一个 MyProperties 的 Bean 类：
 
@@ -76,12 +76,13 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/person")
 public class PersonController {
+
     @Value("${another.custom.property}")
     String property;
 }
 ```
 
->这里使用的 "${...}" 写法，是 Spring 独有的 SpEL（Spring Expression Language）语法。熟悉 JSP 的同学应该都在 JSP 中使用过 EL 表达式。SpEL 的思想是类似的。
+>这里使用的 "${...}" 写法，是 Spring 独有的 SpEL（Spring Expression Language）语法。熟悉 JSP 的同学应该都在 JSP 中使用过 EL 表达式。SpEL 的思想是类似的。SpEL 的功能很强大，这里不再赘述，有兴趣的同学可以查阅有关资料。
 
 ### Profile
 
@@ -111,7 +112,7 @@ customProperty:
 
 ### Auto-Configuration
 
-SpringBoot 对于跨组件依赖的行为，提供了 Auto-Configuration 进行支持。Auto-Configuration 允许我们根据运行时环境进行判断，执行不同的配置操作。例如，我们可以判断一个外界的 Bean 是否存在：
+SpringBoot 对于跨组件配置的场景，提供了 Auto-Configuration 进行支持。Auto-Configuration 允许我们根据运行时环境进行判断，执行不同的配置操作。例如，我们可以判断一个外界的 Bean 是否存在：
 
 ```java
 @Bean
@@ -121,6 +122,6 @@ public MyBean thisBean() {
 }
 ```
 
-显而易见，当已经存在一个名为 dataSource 的 Bean 时，thisBean 才会生效。
+通过这样配置，当已经存在一个名为 dataSource 的 Bean 时，thisBean 才会生效。
 
 除此之外，还有 `@ConditionalOnMissingBean`，`@ConditionalOnClass` 等等一系列很方便的 annotation 来帮助我们实现自动配置。
