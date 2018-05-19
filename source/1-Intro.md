@@ -18,6 +18,9 @@ JavaEE 全称 Java Platform, Enterprise Edition，它是对 JavaSE(Java Platform
 
 JavaEE 本身没有提供 Servlet Container，比较常用支持 Servlet Container 的 Server 软件有 Apache Tomcat，Glassfish，JBoss，Jetty 等等。
 
+> Servlet 是 Java Web 开发的事实标准，不过也不代表所有 Java Web 框架都一定要使用或者兼容 Servlet。不使用 Servlet 也可以进行 Java Web 开发，例如 Play Framework，就是完全自立门户的一个框架。
+
+
 ### EJB 和 EJB Container
 
 EJB 全称 Enterprise JavaBean，和 Servlet 一样，也是 JavaEE 当中的一个组件，面向更加复杂的企业业务开发。对于 Web 开发来说，EJB 不是必须的。本教程不打算涉及有关 EJB 开发的内容，读者如果感兴趣可以查阅有关资料。
@@ -31,5 +34,3 @@ Spring 是一个非常庞大的框架，其中包括 SpringMVC，SpringBoot 以�
 Spring 某种程度上可以认为是 EJB 的替代品。Spring 不需要完整的 JavaEE 内容，仅仅依赖了最基础的 Servlet，也不需要 EJB Container，只用普通的 Servlet Container 就可以运行。在 Servlet 之上 Spring 提供了诸多方便好用的工具，极大地降低了 Java Web 开发入门门槛。
 
 注意一些中文资料把 JavaEE 以及 JavaWeb 和 Spring 混淆在一起，是十分不妥的。经过前面的介绍可以看到，Spring 和 JavaEE 不是一个层面上的东西。Spring 仅依赖了 JavaEE 的 API 标准，最新版的 Spring 甚至进一步隔绝了 JavaEE 的 API。开发者可以完全不关心 Servlet 或者 JavaEE 等概念，也可以进行 Java Web 开发。同时 Spring 也不是唯一的 Java Web 框架，其竞争对手有 Structs，Spark 等。
-
-
