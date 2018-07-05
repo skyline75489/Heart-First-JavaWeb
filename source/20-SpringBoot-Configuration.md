@@ -110,6 +110,8 @@ customProperty:
 
 > Profile 还可以通过 SpringBoot 启动时传入命令行参数来激活。
 
+*注意*: 下面的内容介绍不全面，暂时不推荐阅读。
+
 ### Auto-Configuration
 
 SpringBoot 对于跨组件配置的场景，提供了 Auto-Configuration 进行支持。Auto-Configuration 允许我们根据运行时环境进行判断，执行不同的配置操作。例如，我们可以判断一个外界的 Bean 是否存在：
