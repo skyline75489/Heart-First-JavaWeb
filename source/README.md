@@ -3,6 +3,11 @@ Heart First Java Web
 
 这是一个走心的 Java Web 入门开发教程。面向新手友好，容易上手，同时没有废话。
 
+
+本文档使用 [Gitbook](https://github.com/GitbookIO/gitbook) 制作，[Github 仓库地址](https://github.com/skyline75489/Heart-First-JavaWeb)。
+
+使用 [知识共享“署名-非商业性使用-相同方式共享 3.0 中国大陆”许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 授权。
+
 阅读这本教程之前，希望你能够具备以下技能：
 
 * Java 语言基础
