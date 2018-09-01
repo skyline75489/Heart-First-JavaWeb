@@ -8,6 +8,7 @@ if which gitbook > /dev/null; then
     cd _book
     cp -R * ../../../heart-first-javaweb-gitbook
     cd ../../../heart-first-javaweb-gitbook/
+    git pull --rebase
     git add -A
     git commit -am "update `date`"
     git push
