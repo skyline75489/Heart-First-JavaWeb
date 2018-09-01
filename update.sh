@@ -11,7 +11,7 @@ if which gitbook > /dev/null; then
     git pull --rebase
     git add -A
     git commit -am "update `date`"
-    git push
+    git push --force
 else
     echo "Gitbook not installed."
 fi
