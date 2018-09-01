@@ -1,0 +1,617 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SpringBoot Data REST 初步 · Heart First JavaWeb</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="20-SpringBoot-Configuration.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1-Intro.html">
+            
+                <a href="1-Intro.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2-First-JavaEE.html">
+            
+                <a href="2-First-JavaEE.html">
+            
+                    
+                    第一个 JavaEE 应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3-First-JSP.html">
+            
+                <a href="3-First-JSP.html">
+            
+                    
+                    第一个 JSP 程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4-Whats-Next.html">
+            
+                <a href="4-Whats-Next.html">
+            
+                    
+                    下一步做什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5-First-SpringMVC-Controller.html">
+            
+                <a href="5-First-SpringMVC-Controller.html">
+            
+                    
+                    第一个 SpringMVC Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6-Into-SpringMVC.html">
+            
+                <a href="6-Into-SpringMVC.html">
+            
+                    
+                    初识 SpringMVC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7-First-Spring-Container.html">
+            
+                <a href="7-First-Spring-Container.html">
+            
+                    
+                    初识 Spring IoC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8-Intro-Spring-Bean.html">
+            
+                <a href="8-Intro-Spring-Bean.html">
+            
+                    
+                    Spring Bean 初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9-Intro-Annoataion-Config.html">
+            
+                <a href="9-Intro-Annoataion-Config.html">
+            
+                    
+                    Annotation-Based 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10-Component-Scan.html">
+            
+                <a href="10-Component-Scan.html">
+            
+                    
+                    Component Scan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11-Java-Based-Configuration.html">
+            
+                <a href="11-Java-Based-Configuration.html">
+            
+                    
+                    Java Config
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12-Bean-Scope.html">
+            
+                <a href="12-Bean-Scope.html">
+            
+                    
+                    Bean 生命周期和作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13-Autowiring-Candidate.html">
+            
+                <a href="13-Autowiring-Candidate.html">
+            
+                    
+                    Autowiring Candidate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="14-Servlet-3.html">
+            
+                <a href="14-Servlet-3.html">
+            
+                    
+                    Servlet 3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="15-Pure-Java-SpringMVC.html">
+            
+                <a href="15-Pure-Java-SpringMVC.html">
+            
+                    
+                    纯 Java SpringMVC 配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="16-Intro-Maven.html">
+            
+                <a href="16-Intro-Maven.html">
+            
+                    
+                    Maven 初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="17-RestController.html">
+            
+                <a href="17-RestController.html">
+            
+                    
+                    RestController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="18-Rest-Practice.html">
+            
+                <a href="18-Rest-Practice.html">
+            
+                    
+                    Rest 实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="19-Intro-SpringBoot.html">
+            
+                <a href="19-Intro-SpringBoot.html">
+            
+                    
+                    SpringBoot 初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="20-SpringBoot-Configuration.html">
+            
+                <a href="20-SpringBoot-Configuration.html">
+            
+                    
+                    SpringBoot Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.22" data-path="21-Intro-SpringDataRest.html">
+            
+                <a href="21-Intro-SpringDataRest.html">
+            
+                    
+                    SpringBoot Data REST 初步
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >SpringBoot Data REST 初步</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="spring-data-rest-&#x521D;&#x6B65;"><a name="spring-data-rest-&#x521D;&#x6B65;" class="plugin-anchor" href="#spring-data-rest-&#x521D;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a>Spring Data REST &#x521D;&#x6B65;</h2>
+<p>&#x5728;&#x524D;&#x9762;&#x7684; REST &#x5B9E;&#x8DF5;&#x5F53;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5E38;&#x7528;&#x7684; CRUD &#x64CD;&#x4F5C;&#xFF0C;&#x662F;&#x6709;&#x5E38;&#x89C1;&#x7684;&#x5199;&#x6CD5;&#x548C;&#x6A21;&#x5F0F;&#x7684;&#x3002;&#x5BF9;&#x4E8E;&#x5F88;&#x591A;&#x8D44;&#x6E90;&#x7684; CRUD&#xFF0C;&#x8981;&#x5199;&#x5F88;&#x591A;&#x7C7B;&#x4F3C;&#x7684;&#x6570;&#x636E;&#x5E93;&#x64CD;&#x4F5C;&#x4EE3;&#x7801;&#xFF0C;&#x90A3;&#x4E48;&#x6709;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x7B80;&#x5316;&#x4EE3;&#x7801;&#x5462;&#xFF1F;&#x4EBA;&#x4EEC;&#x81EA;&#x7136;&#x5DF2;&#x7ECF;&#x60F3;&#x5230;&#x529E;&#x6CD5;&#x4E86;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C06;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528; Spring Data REST &#x6765;&#x7B80;&#x5316; REST &#x670D;&#x52A1;&#x7684;&#x5F00;&#x53D1;&#x3002;</p>
+<h3 id="&#x57FA;&#x672C;&#x6982;&#x5FF5;"><a name="&#x57FA;&#x672C;&#x6982;&#x5FF5;" class="plugin-anchor" href="#&#x57FA;&#x672C;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x672C;&#x6982;&#x5FF5;</h3>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x4E00;&#x4E9B;&#x65B0;&#x7684;&#x6982;&#x5FF5;&#xFF1A;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x4F60;&#x8FD8;&#x4E0D;&#x4E86;&#x89E3; ORM &#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x6982;&#x5FF5;&#xFF0C;&#x8BF7;&#x5148;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;&#xFF0C;&#x8FD9;&#x91CC;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
+</blockquote>
+<ul>
+<li>JPA&#xFF1A;JPA &#x5168;&#x79F0; Java Persistence API&#xFF0C;&#x662F; Sun &#x5B98;&#x65B9;&#x63D0;&#x51FA;&#x7684;&#x4E00;&#x5957; Java &#x6301;&#x4E45;&#x5316;<strong>&#x89C4;&#x8303;</strong>&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7406;&#x89E3;&#x4E3A; ORM &#x7684;&#x89C4;&#x8303;&#x3002;</li>
+<li>Hibernate&#xFF1A;Hibernate &#x662F;&#x4E00;&#x4E2A;&#x77E5;&#x540D; Java &#x6301;&#x4E45;&#x5316;&#x6846;&#x67B6;&#xFF0C;&#x5B83;<strong>&#x5B9E;&#x73B0;</strong>&#x4E86; JPA &#x89C4;&#x8303;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x4F5C; JPA Provider&#x3002;</li>
+<li>Spring Data JPA&#xFF1A;Spring &#x7684; JPA &#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x5C06; JPA &#x878D;&#x5165; Spring &#x6846;&#x67B6;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x5B83;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528; Hibernate &#x4F5C;&#x4E3A; JPA Provider&#x3002;</li>
+</ul>
+<h3 id="&#x5F00;&#x59CB;&#x4F7F;&#x7528;-spring-data-rest"><a name="&#x5F00;&#x59CB;&#x4F7F;&#x7528;-spring-data-rest" class="plugin-anchor" href="#&#x5F00;&#x59CB;&#x4F7F;&#x7528;-spring-data-rest"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F00;&#x59CB;&#x4F7F;&#x7528; Spring Data REST</h3>
+<p>&#x4EE5;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7684; PersonDao &#x4E3A;&#x4F8B;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x4F7F;&#x7528; Spring Data REST &#x91CD;&#x5199;&#x5B83;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5728; pom &#x4E2D;&#x52A0;&#x5165;&#x76F8;&#x5173;&#x4F9D;&#x8D56;&#xFF1A;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-data-jpa<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-starter-data-rest<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x4E00;&#x4E0B;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x4EEC;&#x63A5;&#x4E0B;&#x6765;&#x4F7F;&#x7528; yaml &#x8FDB;&#x884C;&#x6709;&#x5173;&#x914D;&#x7F6E;&#xFF0C;&#x5C06; AppConfig &#x5F53;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5E93;&#x914D;&#x7F6E;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x7531;&#x4E8E; SQLite &#x6CA1;&#x6709;&#x63D0;&#x4F9B; Hibernate &#x7684;&#x63A5;&#x5165;&#x652F;&#x6301;&#xFF08;Dialect&#xFF09;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x624B;&#x52A8;&#x5F15;&#x5165;&#x4E00;&#x4E0B;&#xFF0C;&#x6709;&#x5173;&#x4EE3;&#x7801;&#x5728;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x627E;&#x5230; <a href="https://github.com/restart1025/Spring-Boot-SQLite/blob/master/src/main/java/com/restart1025/sqlite/SQLiteDialect.java" target="_blank">https://github.com/restart1025/Spring-Boot-SQLite/blob/master/src/main/java/com/restart1025/sqlite/SQLiteDialect.java</a></p>
+<p>&#x5C06;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x5F15;&#x5165;&#x5DE5;&#x7A0B;&#x4E4B;&#x540E;&#xFF0C;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x8BA9; Hibernate &#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x9A71;&#x52A8;&#xFF1A;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">spring:</span>
+<span class="hljs-attr">  profiles:</span>
+<span class="hljs-attr">    active:</span> dev
+<span class="hljs-attr">  datasource:</span>
+<span class="hljs-attr">    driver-class-name:</span> org.sqlite.JDBC
+<span class="hljs-attr">    url:</span> jdbc:sqlite:D:\\test.db
+<span class="hljs-attr">    username:</span>
+<span class="hljs-attr">    password:</span>
+<span class="hljs-attr">  jpa:</span>
+<span class="hljs-attr">    database-platform:</span> com.skyline.SQLiteDialect
+<span class="hljs-attr">    hibernate:</span>
+<span class="hljs-attr">      ddl-auto:</span> update
+<span class="hljs-attr">    show-sql:</span> <span class="hljs-literal">true</span>
+</code></pre>
+<p>&#x91CD;&#x5199; Person&#xFF0C;&#x5C06; Person &#x5B9A;&#x4E49;&#x6210; JPA &#x517C;&#x5BB9;&#x7684; model&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.skyline.model;
+
+<span class="hljs-keyword">import</span> javax.persistence.Entity;
+<span class="hljs-keyword">import</span> javax.persistence.GeneratedValue;
+<span class="hljs-keyword">import</span> javax.persistence.Id;
+
+<span class="hljs-meta">@Entity</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> </span>{
+
+    <span class="hljs-meta">@Id</span>
+    <span class="hljs-meta">@GeneratedValue</span>
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
+
+    <span class="hljs-keyword">private</span> String name;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> name;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span><span class="hljs-params">(String name)</span> </span>{
+        <span class="hljs-keyword">this</span>.name = name;
+    }
+
+}
+</code></pre>
+<p>&#x8FD8;&#x8BB0;&#x5F97;&#x4E4B;&#x524D;&#x63D0;&#x5230;&#x7684; @Repository &#x5417;&#xFF1F;Spring &#x5F53;&#x4E2D;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x4F7F;&#x7528; Repository &#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x8FDB;&#x884C;&#x62BD;&#x8C61;&#x3002;&#x9996;&#x5148;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0; package &#x540D;&#x4E3A; repository&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x6211;&#x4EEC;&#x7684; Rest Repository&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> com.skyline.repository;
+
+<span class="hljs-keyword">import</span> com.skyline.model.Person;
+<span class="hljs-keyword">import</span> org.springframework.data.repository.PagingAndSortingRepository;
+<span class="hljs-keyword">import</span> org.springframework.data.rest.core.annotation.RepositoryRestResource;
+
+<span class="hljs-meta">@RepositoryRestResource</span>(path = <span class="hljs-string">&quot;person&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">PersonRepository</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">PagingAndSortingRepository</span>&lt;<span class="hljs-title">Person</span>, <span class="hljs-title">Integer</span>&gt; </span>{
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#xFF0C; &#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; Person REST &#x63A5;&#x53E3;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x6CA1;&#x9519;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E48;&#x7B80;&#x5355;&#xFF01;</p>
+<p>&#x4F7F;&#x7528; curl &#x6D4B;&#x8BD5;&#x4E00;&#x4E0B; Person &#x7684;&#x63A5;&#x53E3;&#xFF1A;</p>
+<p>&#x521B;&#x5EFA;&#xFF1A;</p>
+<pre><code class="lang-plaintext">$ curl -X POST http://localhost:8080/person -d&quot;{ \&quot;name\&quot;: \&quot;chester\&quot;}&quot; --header &quot;Content-Type : application/json&quot;
+{
+  &quot;name&quot; : &quot;chester&quot;,
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/person/1&quot;
+    },
+    &quot;person&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/person/1&quot;
+    }
+  }
+}
+</code></pre>
+<p>&#x83B7;&#x53D6;&#xFF1A;</p>
+<pre><code class="lang-plaintext">$ curl -X GET http://localhost:8080/person/1
+{
+  &quot;name&quot; : &quot;chester&quot;,
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/person/1&quot;
+    },
+    &quot;person&quot; : {
+      &quot;href&quot; : &quot;http://localhost:8080/person/1&quot;
+    }
+  }
+}
+</code></pre>
+<p>&#x540C;&#x6837;&#x4FEE;&#x6539;&#x548C;&#x5220;&#x9664;&#x4E5F;&#x662F;&#x53EF;&#x7528;&#x7684;&#x3002;&#x6B64;&#x5916;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; /person &#x62FF;&#x5230;&#x6240;&#x6709;&#x7684; person &#x5217;&#x8868;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x63A5;&#x53E3;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5C1D;&#x8BD5;&#x4E00;&#x4E0B;&#x3002;</p>
+<p>&#x53EF;&#x80FD;&#x4F60;&#x6CE8;&#x610F;&#x5230;&#x4E86;&#xFF0C;&#x8FD4;&#x56DE;&#x7684; JSON &#x5F53;&#x4E2D;&#x6709; _links &#x8FD9;&#x79CD;&#x5C5E;&#x6027;&#x3002;&#x8FD9;&#x79CD; JSON &#x683C;&#x5F0F;&#x88AB;&#x79F0;&#x4E3A; HATEOAS &#x683C;&#x5F0F;&#xFF0C;&#x5373; hal-json&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x66F4;&#x52A0;&#x89C4;&#x8303;&#x7684; REST &#x63A5;&#x53E3;&#x6807;&#x51C6;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4E0D;&#x60F3;&#x4F7F;&#x7528; hal-json&#xFF0C;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">spring:</span>
+  //...
+<span class="hljs-attr">  data:</span>
+<span class="hljs-attr">    rest:</span>
+<span class="hljs-attr">      defaultMediaType:</span> application/json
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="20-SpringBoot-Configuration.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: SpringBoot Configuration">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SpringBoot Data REST 初步","level":"1.22","depth":1,"previous":{"title":"SpringBoot Configuration","level":"1.21","depth":1,"path":"20-SpringBoot-Configuration.md","ref":"20-SpringBoot-Configuration.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchors"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchors":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Heart First JavaWeb","gitbook":"*","description":"一个走心的 Java Web 入门开发教程 "},"file":{"path":"21-Intro-SpringDataRest.md","mtime":"2018-06-02T09:06:40.240Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-09-01T11:21:43.733Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
