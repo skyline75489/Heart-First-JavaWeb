@@ -11,3 +11,9 @@ Heart First Java Web
 
 使用 [知识共享“署名-非商业性使用-相同方式共享 3.0 中国大陆”许可协议](https://creativecommons.org/licenses/by-nc-sa/3.0/cn/) 授权。
 
+
+### 更多优秀教程：
+
+* [what-happens-when-zh_CN](https://github.com/skyline75489/what-happens-when-zh_CN)——你可能想象不到，浏览器中有如此多的不为人知
+* [interview](https://github.com/HIT-Alibaba/interview)——看完并且真的记在心中，国内的互联网公司面试，你可以横着走
+* [learnrx-zh-cn](https://github.com/skyline75489/learnrx-zh-cn)——Rx 官方出品互动式教程，中文精心翻译，新手老手都能有所收获
