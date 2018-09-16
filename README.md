@@ -17,3 +17,7 @@ Heart First Java Web
 * [what-happens-when-zh_CN](https://github.com/skyline75489/what-happens-when-zh_CN)——你可能想象不到，浏览器中有如此多的不为人知
 * [interview](https://github.com/HIT-Alibaba/interview)——看完并且真的记在心中，国内的互联网公司面试，你可以横着走
 * [learnrx-zh-cn](https://github.com/skyline75489/learnrx-zh-cn)——Rx 官方出品互动式教程，中文精心翻译，新手老手都能有所收获
+
+### 联系作者
+
+![group](./qq.jpeg)
