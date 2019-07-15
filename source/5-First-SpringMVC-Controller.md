@@ -8,11 +8,15 @@ SpringMVC，顾名思义，整个框架都是构建在 MVC 基础之上的，不
 
 然后下载 Apache 出品的 common-logging，它是 Spring 依赖的一个库，这里使用的是 common-logging-1.2。
 
-将上面下载的依赖解压缩之后，将那些 jar 包加入 IDEA 的依赖路径当中，注意以 javadoc 和 sources 结尾的 jar 包可以忽略不计。
+将上面下载的依赖解压缩之后，将那些 jar 包加入 IDEA 的依赖路径当中，注意以 javadoc 和 sources 结尾的 jar 包可以忽略不计。  
+<br/>
+当然也可以直接Idea新建项目，选Spring,勾选SpringMVC(这时Web也会自动勾选)，再选一下Tomcat，确定，然后剩下的源码依照下文修改即可  
+参考 [IDEA建立Spring MVC Hello World 详细入门教程 - 小墨的童鞋 博客园](https://www.cnblogs.com/wormday/p/8435617.html)  
 
 ### Servlet 配置
 
-前面提到过 SpringMVC 是构建在 Servlet 基础之上的，它对外提供了一个名为 DispatchServlet 的类，这个类相当于是 SpringMVC 和 Servlet API 的一个交界点。顾名思义，它也是 SpringMVC 当中对于请求处理的一个分发器。它将 Servlet 传递过来的请求根据 URL 分发给对应的 Controller。
+前面提到过 SpringMVC 是构建在 Servlet 基础之上的，它对外提供了一个名为 DispatchServlet 的类，这个类相当于是 SpringMVC 和 Servlet API 的一个交界点。  
+顾名思义，它也是 SpringMVC 当中对于请求处理的一个分发器。它将 Servlet 传递过来的请求根据 URL 分发给对应的 Controller。
 
 >在前面的内容中我们可以看到，通过在 web.xml 当中配置 `url-pattern` 也可以起到分发请求的作用，不过当大量的 URL 都需要在 web.xml 当中进行配置的时候，整个 web.xml 就变成了一个灾难。因此广大 Web 框架都选择避免 web.xml，在此之上构建自己的请求分发机制。
 
@@ -38,14 +42,15 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 </web-app>
 ```
 
-在修改 Servlet 为 Spring 提供的 DispatcherServlet 之外，还有两点需要注意：
+在修改 Servlet 为 Spring 提供的 DispatcherServlet 之外，还有两点需注意：
 
-1. 加入了 `load-on-startup` 参数，告诉 Container 在启动的时候（而不是请求发过来的时候）就加载这个 Servlet
-2. 使用了 `/*` 的 wildcard URL，意味着所有的请求都将通过 DispatcherServlet 处理。
+1. 加入的 `load-on-startup` 参数，作用：告知 Container 在启动的时候就加载这个 Servlet（而非收到请求时才加载）  
+2. 使用了 `/*` 的 wildcard URL， 作用：符合/*的web路径（即所有的请求)都将通过 DispatcherServlet 处理。
 
 ### 编写 Controller
 
-相比直接使用 Servlet API，编写 Controller 可以说是容易了太多。创建一个 MyFirstSpringController 类：
+相比直接使用 Servlet API，编写 Controller 更简洁方便。  
+我们创建一个 MyFirstSpringController 类：  
 
 ```java
 package com.skyline;
@@ -64,11 +69,15 @@ public class MyFirstSpringController {
 }
 ```
 
-我们使用了若干 Annotation 来简化代码的编写。通过 `@Controller` 我们将一个普通 Java 类标记成一个 Controller 类。通过 `@RequestMapping` 和 `@ResponseBody` 我们将一个普通函数标记成可以处理 GET 请求，同时返回字符串的 Handler。
+这里使用了若干 Annotation 来简化代码。  
+- 通过 `@Controller` 我们将一个普通 Java 类标记成一个 Controller 类。
+- 通过 `@RequestMapping` 和 `@ResponseBody` 我们将一个普通函数标记成**可以处理 GET 请求，同时返回字符串的 Handler。**
 
 ### SpringMVC 配置
 
-我们编写了一个 Controller 之后，怎么样让 DispatchServlet 找到我们编写的 Controller 呢？SpringMVC 提供了使用 xml 配置的方法。在 `WEB-INF` 文件夹下，也就是 web.xml 隔壁，创建一个 MyFirstServletName-servlet.xml（注意命名）：
+我们编写了一个 Controller 之后，怎么样让 DispatchServlet 找到我们编写的 Controller 呢？  
+SpringMVC 提供了使用 xml 配置的方法：
+在 `WEB-INF` 文件夹下，也就是 web.xml 隔壁，创建一个 MyFirstServletName-servlet.xml（注意命名 <servlet-name>-servlet.xml）：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -91,7 +100,8 @@ public class MyFirstSpringController {
 
 ### 部署
 
-和前面提到的 Tomcat 部署过程类似，首先我们将类生成的 class 文件拷贝到 `WEB-INF/classes` 下。同时由于引入了依赖，我们还需要将 Spring 以及之前提到的 common-logging jar 包拷贝到 `WEB-INF/lib` 文件夹下。完成之后，启动 Tomcat，打开浏览器可以看到运行的结果：
+和前面提到的 Tomcat 部署过程类似，首先我们将类生成的 class 文件拷贝到 `WEB-INF/classes` 下。同时由于引入了依赖，我们还需要将 Spring 以及之前提到的 common-logging jar 包拷贝到 `WEB-INF/lib` 文件夹下。  
+完成之后，启动 Tomcat，浏览器打开对应地址，可以看到运行的结果：  
 
 ![result](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/5-mvc-controller-result.png)
 
