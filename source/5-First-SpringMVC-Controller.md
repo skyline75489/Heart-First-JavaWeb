@@ -8,17 +8,21 @@ SpringMVC，顾名思义，整个框架都是构建在 MVC 基础之上的，不
 
 然后下载 Apache 出品的 common-logging，它是 Spring 依赖的一个库，这里使用的是 common-logging-1.2。
 
-将上面下载的依赖解压缩之后，将那些 jar 包加入 IDEA 的依赖路径当中，注意以 javadoc 和 sources 结尾的 jar 包可以忽略不计。  
+将以上的依赖解压缩之后，把那些 jar 包加入 IDEA 的依赖路径，注意以 javadoc 和 sources 结尾的 jar 包可忽略不计。  
 <br/>
-当然也可以直接Idea新建项目，选Spring,勾选SpringMVC(这时Web也会自动勾选)，再选一下Tomcat，确定，然后剩下的源码依照下文修改即可  
+如果您使用的是IDEA专业版，那么可以：  
+- 新建项目，选Spring,勾选SpringMVC(这时Web也会自动勾选)，再选一下Tomcat，确定，然后剩下的源码依照下文修改即可  
+
 参考 [IDEA建立Spring MVC Hello World 详细入门教程 - 小墨的童鞋 博客园](https://www.cnblogs.com/wormday/p/8435617.html)  
 
 ### Servlet 配置
 
 前面提到过 SpringMVC 是构建在 Servlet 基础之上的，它对外提供了一个名为 DispatchServlet 的类，这个类相当于是 SpringMVC 和 Servlet API 的一个交界点。  
-顾名思义，它也是 SpringMVC 当中对于请求处理的一个分发器。它将 Servlet 传递过来的请求根据 URL 分发给对应的 Controller。
+顾名思义，它也是 SpringMVC 当中对于请求处理的一个分发器。（它将 Servlet 传递过来的请求根据 URL 分发给对应的 Controller）
 
->在前面的内容中我们可以看到，通过在 web.xml 当中配置 `url-pattern` 也可以起到分发请求的作用，不过当大量的 URL 都需要在 web.xml 当中进行配置的时候，整个 web.xml 就变成了一个灾难。因此广大 Web 框架都选择避免 web.xml，在此之上构建自己的请求分发机制。
+>在前面的内容中我们可以看到，通过在 web.xml 文件里配置 `url-pattern` ，也可以起到分发请求的作用。  
+>但是，如果有大量的 URL 都需要在 web.xml 进行配置时，整个 web.xml 就变成了一个灾难。  
+>因此很多 Web 框架都选择避免 web.xml，在此之上构建自己的请求分发机制。
 
 首先我们修改 web.xml：
 
@@ -45,7 +49,7 @@ http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 在修改 Servlet 为 Spring 提供的 DispatcherServlet 之外，还有两点需注意：
 
 1. 加入的 `load-on-startup` 参数，作用：告知 Container 在启动的时候就加载这个 Servlet（而非收到请求时才加载）  
-2. 使用了 `/*` 的 wildcard URL， 作用：符合/*的web路径（即所有的请求)都将通过 DispatcherServlet 处理。
+2. 使用了 `/*` 的 wildcard URL， 作用：符合 `/*` 的 web 路径（即所有的请求)都将由 DispatcherServlet 处理。
 
 ### 编写 Controller
 
@@ -100,8 +104,8 @@ SpringMVC 提供了使用 xml 配置的方法：
 
 ### 部署
 
-和前面提到的 Tomcat 部署过程类似，首先我们将类生成的 class 文件拷贝到 `WEB-INF/classes` 下。同时由于引入了依赖，我们还需要将 Spring 以及之前提到的 common-logging jar 包拷贝到 `WEB-INF/lib` 文件夹下。  
-完成之后，启动 Tomcat，浏览器打开对应地址，可以看到运行的结果：  
+和前面提到的 Tomcat 部署过程类似，首先我们将类生成的 class 文件拷贝到 `WEB-INF/classes` 下。同时，由于引入了依赖，我们还需要将 Spring 以及之前提到的 common-logging jar 包拷贝到 `WEB-INF/lib` 目录下。  
+完成以上一切，然后启动 Tomcat，浏览器打开对应地址，可以看到运行的结果：  
 
 ![result](https://raw.githubusercontent.com/skyline75489/Heart-First-JavaWeb/master/img/5-mvc-controller-result.png)
 
