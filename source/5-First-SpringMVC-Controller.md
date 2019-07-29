@@ -10,7 +10,7 @@ SpringMVC，顾名思义，整个框架都是构建在 MVC 基础之上的，不
 
 将以上的依赖解压缩之后，把那些 jar 包加入 IDEA 的依赖路径，注意以 javadoc 和 sources 结尾的 jar 包可忽略不计。  
 
-> 如果使用的是 IDEA Ultimate 版本，那么可以利用 IDEA 提供的 template 直接新建和部署项目。感兴趣的同学可以参考有关博客： [IDEA建立Spring MVC Hello World 详细入门教程 - 小墨的童鞋 博客园](https://www.cnblogs.com/wormday/p/8435617.html)  
+> 如果使用的是 IDEA Ultimate 版本（即专业版），那么可以利用 IDEA 提供的 template 直接新建和部署项目。感兴趣的同学可以参考网上的有关博客，例如： [IDEA建立Spring MVC Hello World 详细入门教程 - 小墨的童鞋 博客园](https://www.cnblogs.com/wormday/p/8435617.html)
 
 ### Servlet 配置
 
