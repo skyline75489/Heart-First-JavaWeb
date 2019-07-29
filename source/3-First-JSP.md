@@ -34,7 +34,7 @@ public class MyFirstServlet extends HttpServlet {
 
 JSP，全称 JavaServer Pages。可以把 JSP 理解成一种高度抽象的 Servlet。事实上 JSP 在运行期间会被编译成 Servlet，因此 JSP 和 Servlet 可以认为没有本质上的差异，只不过写起来容易了很多。  
 
-> 现在流行的 Web 服务架构往往采用前后端分离的设计，从这个角度看，某种程度上 Servlet 又比 JSP 有优势了。真是有意思。
+> 现在流行的 Web 服务架构往往采用前后端分离的设计，JSP 这种使用后端模板的技术也逐渐被淘汰了。感兴趣的同学可以查阅“前后端分离”有关资料，这里不再赘述。
 
 前面提到的 Tomcat 不仅支持了 Servlet，也支持了 JSP 技术。下面我们使用 JSP 重写上面的程序。
 
