@@ -30,9 +30,11 @@ public class MyFirstServlet extends HttpServlet {
 
 注意我们使用了 `HttpServlet` 而不是前一个例子中的 `Servlet`，它是一个更高级的封装类。
 
+<br><br><br><hr>
 可以看到，直接使用 Servlet 生成网页，不仅代码写起来困难，可维护性也不高。为了把 HTML 这些非逻辑的部分抽离出来，人们引入了 JSP 技术。
 
-JSP，全称 JavaServer Pages。JSP 可以理解成一种高度抽象的 Servlet。事实上 JSP 在运行期间会被编译成 Servlet，因此 JSP 和 Servlet 可以认为没有本质上的差异，只不过写起来容易了很多。
+JSP，全称 JavaServer Pages。可以把 JSP 理解成一种高度抽象的 Servlet。事实上 JSP 在运行期间会被编译成 Servlet，因此 JSP 和 Servlet 可以认为没有本质上的差异，只不过写起来容易了很多。  
+> 但事实上，现在的 Web 服务使用前后端分离，所以 Servlet 又比 JSP 有优势了。真是有意思。   
 
 前面提到的 Tomcat 不仅支持了 Servlet，也支持了 JSP 技术。下面我们使用 JSP 重写上面的程序。
 
