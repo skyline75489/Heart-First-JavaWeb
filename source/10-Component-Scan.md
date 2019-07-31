@@ -58,13 +58,13 @@ public class MyPersonComponent {
 }
 ```
 
-可见，我们其实就是把原先在 XML 当中的配置，挪到了 Java 代码里。运行代码，得到的结果和之前一样。
+可见，我们其实就是把原先在 XML 当中的配置，挪到了 Java 代码里。运行代码，得到的结果和之前一样。  
 
->注意到我们的 `MyServiceImpl` 仅仅设置了 greeting，为什么这样就能够正常工作呢？还记得上一节的 `@Autowired` 吗，它依然在发挥自己的作用，帮我们找到了 Person 的实例，并且赋给了 `MyServiceImpl`。
+>注意到我们的 `MyServiceImpl` 仅仅设置了 greeting，为什么这样就能够正常工作呢？还记得上一节的 `@Autowired` 吗，它依然在发挥自己的作用，帮我们找到了 Person 的实例，并且赋给了 `MyServiceImpl`。  
 
 
 <hr>
-小结一下：
+小结一下：  
 > 其实这里的 `MyPersonComponent` 和之前三个 "依赖注入(DI)" 的类是完全不一样的  
 > 对比一下，你会发现前三种DI都是有 sayHello()方法的，而这里的 `MyPersonComponent` 只是代替了 XML 的部分工作，本身并没有 sayHello方法。  
 
