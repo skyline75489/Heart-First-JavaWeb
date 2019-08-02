@@ -69,12 +69,4 @@ public class MyPersonComponent {
 > 对比一下，你会发现前三种DI都是有 sayHello()方法的，而这里的 `MyPersonComponent` 只是代替了 XML 的部分工作，本身并没有 sayHello方法。  
 
  - 之前的三种 依赖注入(DI) 方式的实现都是： 由 Spring 容器通过 XML 来生成 `MyServiceImpl` 类的Bean对象（类本身就是 Spring 容器操作的对象）
- - 而这里的 `MyPersonComponent` 类只是用来生成`MyServiceImpl` 的Bean对象，它是代替了 XML 的绝大部分工作（这个类本身和`MyServiceImpl`是没有继承关系，所以也没有 sayHello方法)
-
- **本节代码示例**
- ```Java
- 写在Main函数里（命名稍微改动，请变通）：
-        ApplicationContext ComponentContext = new ClassPathXmlApplicationContext("Component-scan.xml");
-        MyServiceImpl service = ComponentContext.getBean("myService", MyServiceImpl.class);
-        System.out.println(service.sayHello());
- ```
+ - 而这里的 `MyPersonComponent` 类只是用来生成`MyServiceImpl` 的Bean对象，它是代替了 XML 的绝大部分工作（这个类是没有 sayHello方法的)
