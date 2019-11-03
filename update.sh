@@ -10,7 +10,7 @@ if which gitbook > /dev/null; then
     cp -R * ../../../heart-first-javaweb-gitbook
     cd ../../../heart-first-javaweb-gitbook/
     git add -A
-    git commit -am "update `date`"
+    git commit --author="skyline75489 <skyline75489@outlook.com>" -am "[CI] auto update"
     git push --force
 else
     echo "Gitbook not installed."
