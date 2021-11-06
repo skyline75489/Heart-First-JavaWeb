@@ -14,7 +14,7 @@ SpringMVC，顾名思义，整个框架都是构建在 MVC 基础之上的，不
 
 ### Servlet 配置
 
-前面提到过 SpringMVC 是构建在 Servlet 基础之上的，它对外提供了一个名为 DispatchServlet 的类，这个类相当于是 SpringMVC 和 Servlet API 的一个交界点。  
+前面提到过 SpringMVC 是构建在 Servlet 基础之上的，它对外提供了一个名为 DispatcherServlet 的类，这个类相当于是 SpringMVC 和 Servlet API 的一个交界点。
 顾名思义，它也是 SpringMVC 当中对于请求处理的一个分发器。（它将 Servlet 传递过来的请求根据 URL 分发给对应的 Controller）
 
 > 在前面的内容中我们可以看到，通过在 web.xml 文件里配置 `url-pattern` ，也可以起到分发请求的作用。  
