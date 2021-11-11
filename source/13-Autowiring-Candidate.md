@@ -95,4 +95,4 @@ public void IWantMike(@Qualifier("Mike") Person person) {
 }
 ```
 
->细心的同学可能观察到了，`@Autowired` 和在 XML 里进行 Bean 的 ref 还有有一些差别。在 XML 中我们是基于 id/name 去引用依赖的，而 `@Autowired` 从本质上就是一种基于类型的依赖机制，qualifier 是一种额外的特殊情况。
+>细心的同学可能观察到了，`@Autowired` 和在 XML 里进行 Bean 的 ref 还是有一些差别。在 XML 中我们是基于 id/name 去引用依赖的，而 `@Autowired` 从本质上就是一种基于类型的依赖机制，`Qualifier` 是一种额外的特殊情况。
