@@ -30,11 +30,11 @@ public class MyPersonComponent {
 }
 ```
 
-这时候运行程序，会导致异常，Srping 提示的信息是：
+这时候运行程序，会导致异常，Spring 提示的信息是：
 
 >No qualifying bean of type 'com.skyline.model.Person' available: expected single matching bean but found 2: aPerson,bPerson
 
-这个错误已经把问题说明的很清楚了，Spring 并不知道我们想使用哪个 Person，因此抛出了异常。
+这个错误已经把问题说明的很清楚了，同时有两个 Person 存在，Spring 并不知道我们想使用哪个 Person，因此抛出了异常。
 
 为了解决这个问题，Spring 提供了另外的机制，允许我们将额外的信息提供给 Spring，好让它可以正确地找到对应的 Bean。
 
@@ -95,4 +95,4 @@ public void IWantMike(@Qualifier("Mike") Person person) {
 }
 ```
 
->细心的同学可能观察到了，`@Autowired` 和在 XML 里进行 Bean 的 ref 还是有一些差别。在 XML 中我们是基于 id/name 去引用依赖的，而 `@Autowired` 从本质上就是一种基于类型的依赖机制，`Qualifier` 是一种额外的特殊情况。
+>细心的同学可能观察到了，`@Autowired` 和在 XML 里进行 Bean 的 ref 还是有一些差别。在 XML 中我们是基于 id/name 去引用依赖的，而 `@Autowired` 从本质上就是一种基于类型的依赖机制，`@Qualifier` 是一种额外的特殊情况。
